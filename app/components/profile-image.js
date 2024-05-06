@@ -4,7 +4,7 @@ import {Tilt} from "react-tilt";
 import Image from "next/image";
 import profilePic from "@/public/images/rdhafiz.jpg"
 
-function ProfileImage() {
+export default function ProfileImage() {
     const defaultOptions = {
         speed: 3000,
         transition: true,
@@ -17,4 +17,3 @@ function ProfileImage() {
     );
 }
 
-export default ProfileImage;
