@@ -255,12 +255,12 @@ export default function Home() {
                     inspires you and your customers.</p>
 
                 <div className="bg-indigo-100 rounded-full inline-flex mb-10">
-                    <button type="button" className="rounded-full md:px-10 px-5 py-3 bg-theme text-white"
+                    <button type="button" className="rounded-full md:px-10 sm:px-5 px-4 py-3 bg-theme text-white"
                             data-filter="all">All
                     </button>
-                    <button type="button" className="rounded-full md:px-10 px-5 py-3" data-filter=".category-a">UI/UX
+                    <button type="button" className="rounded-full md:px-10 sm:px-5 px-4 py-3" data-filter=".category-a">UI/UX
                     </button>
-                    <button type="button" className="rounded-full md:px-10 px-5 py-3"
+                    <button type="button" className="rounded-full md:px-10 sm:px-5 px-4 py-3"
                             data-filter=".category-b">Branding
                     </button>
                     <button type="button" className="rounded-full md:px-10 px-5 py-3" data-filter=".category-c">App
@@ -268,10 +268,12 @@ export default function Home() {
                 </div>
 
 
-                <div className="mix-container grid grid-cols-2 gap-5">
+                <div className="mix-container grid xl:grid-cols-2 gap-5">
 
                     <div data-filter=".category-a" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
-                        <Image className="w-full h-full" src={work1} placeholder="blur" alt="work1"/>
+                        <div className="w-full h-full ">
+                            <Image className="w-full object-cover h-full" src={work1} placeholder="blur" alt="work1"/>
+                        </div>
 
                         <a href="https://barberly.thethemeai.com"
                            className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
@@ -281,8 +283,11 @@ export default function Home() {
                         </a>
                     </div>
 
-                    <div data-filter=".category-b" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
-                        <Image className="w-full h-full" src={work2} placeholder="blur" alt="work1"/>
+                    <div data-filter=".category-b"
+                         className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                        <div className="w-full h-full">
+                            <Image className="w-full object-cover h-full" src={work2} placeholder="blur" alt="work2"/>
+                        </div>
 
                         <a href="https://barberly.thethemeai.com"
                            className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
@@ -292,8 +297,11 @@ export default function Home() {
                         </a>
                     </div>
 
-                    <div data-filter=".category-c" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
-                        <Image className="w-full h-full" src={work3} placeholder="blur" alt="work1"/>
+                    <div data-filter=".category-c"
+                         className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                        <div className="w-full h-full ">
+                            <Image className="w-full object-cover h-full" src={work3} placeholder="blur" alt="work3"/>
+                        </div>
 
                         <a href="https://barberly.thethemeai.com"
                            className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
@@ -303,8 +311,11 @@ export default function Home() {
                         </a>
                     </div>
 
-                    <div data-filter=".category-d" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
-                        <Image className="w-full h-full" src={work4} placeholder="blur" alt="work1"/>
+                    <div data-filter=".category-d"
+                         className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                        <div className="w-full h-full ">
+                            <Image className="w-full object-cover h-full" src={work4} placeholder="blur" alt="work4"/>
+                        </div>
 
                         <a href="https://barberly.thethemeai.com"
                            className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
