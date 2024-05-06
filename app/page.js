@@ -1,11 +1,18 @@
 import ProfileImage from "@/app/components/profile-image";
+import Image from "next/image";
+import work1 from "@/public/images/w1.png"
+import work2 from "@/public/images/w2.png"
+import work3 from "@/public/images/w3.png"
+import work4 from "@/public/images/w4.png"
+// import mixitup from "mixitup"
 
 export default function Home() {
+    // const mixer = mixitup('.mix-container');
     return (
         <main>
+            {/*Hero section start*/}
             <div className="container px-5 mb-16">
 
-                {/*Hero section start*/}
                 <div className="grid md:grid-cols-2 gap-5 place-items-center pt-20">
                     <div className="">
                         <h3 className="text-3xl mb-5 font-semibold text-theme">I'm Ridwan</h3>
@@ -101,13 +108,13 @@ export default function Home() {
 
                 </div>
 
-                {/* Hero section end */}
-
             </div>
+            {/* Hero section end */}
 
+            {/*Service section start*/}
             <div className="container-fluid bg-indigo-50 px-5 py-28">
                 <div className="container">
-                    <h1 className="text-theme text-4xl font-bold">My Quality Services</h1>
+                    <h1 className="text-theme text-[45px] font-bold">My Quality Services</h1>
                     <p className="mt-4">We put your ideas and thus your wishes in the form of a unique web project that
                         inspires you and your customers.</p>
 
@@ -238,6 +245,80 @@ export default function Home() {
                     </ul>
                 </div>
             </div>
+            {/* Service section end */}
+
+            {/*Projects tab section start*/}
+            <div className="container px-5 md:my-20 my-10">
+                <h1 className="text-theme text-[45px] font-bold">My Recent Works</h1>
+                <p className="mt-4 mb-10">We put your ideas and thus your wishes in the form of a unique web project
+                    that
+                    inspires you and your customers.</p>
+
+                <div className="bg-indigo-100 rounded-full inline-flex mb-10">
+                    <button type="button" className="rounded-full md:px-10 px-5 py-3 bg-theme text-white"
+                            data-filter="all">All
+                    </button>
+                    <button type="button" className="rounded-full md:px-10 px-5 py-3" data-filter=".category-a">UI/UX
+                    </button>
+                    <button type="button" className="rounded-full md:px-10 px-5 py-3"
+                            data-filter=".category-b">Branding
+                    </button>
+                    <button type="button" className="rounded-full md:px-10 px-5 py-3" data-filter=".category-c">App
+                    </button>
+                </div>
+
+
+                <div className="mix-container grid grid-cols-2 gap-5">
+
+                    <div data-filter=".category-a" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                        <Image className="w-full h-full" src={work1} placeholder="blur" alt="work1"/>
+
+                        <a href="https://barberly.thethemeai.com"
+                           className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
+                           target={"_blank"}>
+                            <h1 className="text-3xl font-bold mb-2">Barberly</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi.</p>
+                        </a>
+                    </div>
+
+                    <div data-filter=".category-b" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                        <Image className="w-full h-full" src={work2} placeholder="blur" alt="work1"/>
+
+                        <a href="https://barberly.thethemeai.com"
+                           className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
+                           target={"_blank"}>
+                            <h1 className="text-3xl font-bold mb-2">Barberly</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi.</p>
+                        </a>
+                    </div>
+
+                    <div data-filter=".category-c" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                        <Image className="w-full h-full" src={work3} placeholder="blur" alt="work1"/>
+
+                        <a href="https://barberly.thethemeai.com"
+                           className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
+                           target={"_blank"}>
+                            <h1 className="text-3xl font-bold mb-2">Barberly</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi.</p>
+                        </a>
+                    </div>
+
+                    <div data-filter=".category-d" className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                        <Image className="w-full h-full" src={work4} placeholder="blur" alt="work1"/>
+
+                        <a href="https://barberly.thethemeai.com"
+                           className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
+                           target={"_blank"}>
+                            <h1 className="text-3xl font-bold mb-2">Barberly</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi.</p>
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+            {/* Projects tab section end */}
         </main>
     );
 }
