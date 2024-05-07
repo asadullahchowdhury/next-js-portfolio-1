@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
+
 .text-stroke {
     -webkit-text-stroke: 2px #4f46e5; /* for WebKit browsers */
     text-stroke: 2px black; /* standard */
@@ -22,3 +26,4 @@
         animation: 3s pulsate infinite alternate ease-in-out;
     }
 }
+

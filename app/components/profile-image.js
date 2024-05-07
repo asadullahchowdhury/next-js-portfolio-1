@@ -11,7 +11,8 @@ export default function ProfileImage() {
     }
     return (
         <Tilt options={defaultOptions} className="duration-300">
-            <Image className="xl:h-[550px] h-[400px] w-fit rounded-3xl border-2 border-theme" src={profilePic}
+            <Image className="xl:h-[550px] lg:h-[400px] h-[350px] object-cover w-fit rounded-3xl border-2 border-theme" src={profilePic}
+                   quality={100}
                    placeholder="blur" alt="profile"/>
         </Tilt>
     );

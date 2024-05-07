@@ -14,25 +14,28 @@ import nodeImage from "@/public/images/node.png"
 import mongodbImage from "@/public/images/mongodb.png"
 import sqlImage from "@/public/images/sql.png"
 
+
 export default function Home() {
     // const mixer = mixitup('.mix-container');
     return (
         <main>
             {/*Hero section start*/}
-            <div className="container px-5 mb-16">
+            <div className="container px-5 mb-16" id="home">
 
-                <div className="grid md:grid-cols-2 gap-5 place-items-center pt-20">
-                    <div className="">
-                        <h3 className="text-3xl mb-5 font-semibold text-theme">I'm Ridwan</h3>
-                        <h1 className="xl:text-7xl  text-5xl font-extrabold !leading-[1.5] mb-3">Full
+                <div className="grid sm:grid-cols-2 gap-5 place-items-center lg:pt-52 md:pt-32 sm:pt-28 pt-24 isolate">
+                    <div className="relative">
+
+                        <h3 className="lg:text-3xl text-2xl lg:mb-5 font-semibold text-theme">I'm Ridwan</h3>
+                        <h1 className="xl:text-7xl  lg:text-5xl text-4xl font-extrabold !leading-[1.5] mb-3">Full
                             Stack <br/> Web Developer
                         </h1>
-                        <p className="text-lg leading-7 mb-7">I break down complex user experience problems to
+                        <p className="lg:text-lg text-sm lg:leading-7 mb-7">I break down complex user experience
+                            problems to
                             create integrity <br/> focussed
                             solutions that
                             connect billions of people</p>
 
-                        <div className="md:hidden grid place-items-center my-10">
+                        <div className="sm:hidden grid place-items-center my-10">
                             <ProfileImage/>
                         </div>
 
@@ -85,33 +88,33 @@ export default function Home() {
 
                     </div>
 
-                    <div className="md:block hidden">
+                    <div className="sm:block hidden">
                         <ProfileImage/>
                     </div>
 
 
                 </div>
 
-                <div className="counter grid md:grid-cols-4 grid-cols-2 mt-16">
-                    <div className="flex text-theme items-center gap-3">
+                <div className="counter grid md:grid-cols-4 grid-cols-2 md:mt-16 mt-10 md:place-items-start place-items-center">
+                    <div className="flex md:flex-row flex-col text-theme items-center gap-3 w-full md:text-start text-center">
                         <h1 className="xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-extrabold ">14</h1>
-                        <p className="text-sm">Years of <br/> experience</p>
+                        <p className="text-sm">Years of <br className="md:block hidden"/> experience</p>
                     </div>
 
-                    <div className="flex text-theme items-center gap-3">
+                    <div className="flex md:flex-row flex-col text-theme items-center gap-3 w-full md:text-start text-center">
                         <h1 className="xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-extrabold ">250+</h1>
-                        <p className="text-sm">Projects <br/> completed</p>
+                        <p className="text-sm">Projects <br className="md:block hidden"/> completed</p>
                     </div>
 
 
-                    <div className="flex text-theme items-center gap-3">
-                        <h1 className="xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-extrabold ">1.5k</h1>
-                        <p className="text-sm">Happy <br/> clients</p>
+                    <div className="flex md:flex-row flex-col text-theme items-center gap-3 w-full md:text-start text-center">
+                        <h1 className="xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-extrabold">1.5k</h1>
+                        <p className="text-sm">Happy <br className="md:block hidden"/> clients</p>
                     </div>
 
-                    <div className="flex text-theme items-center gap-3">
+                    <div className="flex md:flex-row flex-col text-theme items-center gap-3 w-full md:text-start text-center">
                         <h1 className="xl:text-6xl lg:text-5xl md:text-3xl text-2xl font-extrabold ">200+</h1>
-                        <p className="text-sm">Delivered over <br/> successful projects</p>
+                        <p className="text-sm">Delivered over <br className="md:block hidden"/> successful projects</p>
                     </div>
 
                 </div>
@@ -120,18 +123,19 @@ export default function Home() {
             {/* Hero section end */}
 
             {/*Service section start*/}
-            <div className="container-fluid bg-indigo-50 px-5 py-28">
+            <div className="container-fluid bg-indigo-50 px-5 lg:py-28 py-10" id="services">
                 <div className="container">
-                    <h1 className="text-theme text-[45px] font-bold">My Quality Services</h1>
+                    <h1 className="text-theme lg:text-[45px] md:text-[40px] text-[35px] font-bold">My Quality
+                        Services</h1>
                     <p className="mt-4">We put your ideas and thus your wishes in the form of a unique web project that
                         inspires you and your customers.</p>
 
                     <ul className="mt-10">
                         <li className="border-b border-indigo-200 group hover:bg-theme transition-all duration-300">
-                            <a href="" className="grid grid-cols-12 px-7 py-8">
+                            <a href="" className="grid grid-cols-12 lg:px-7 lg:py-8 p-5">
 
                                 <div
-                                    className="text-theme group-hover:text-white flex gap-6 items-center col-span-5 font-bold text-3xl">
+                                    className="lg:col-span-5 col-span-10 text-theme group-hover:text-white flex gap-6 items-center font-bold md:text-3xl text-2xl">
                                     <div className="text-xl">
                                         01
                                     </div>
@@ -139,7 +143,7 @@ export default function Home() {
                                     Branding Design
                                 </div>
 
-                                <div className="col-span-5">
+                                <div className="lg:col-span-5 col-span-12 lg:order-2 order-3 lg:mt-0 mt-4">
                                     <p className="group-hover:text-white">I break down complex user experience problems
                                         to create integrity
                                         focussed
@@ -147,9 +151,9 @@ export default function Home() {
                                         that connect billions of people</p>
                                 </div>
 
-                                <div className="col-span-2 flex justify-end">
+                                <div className="col-span-2 flex justify-end lg:order-3 order-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         className="bi bi-arrow-up-right mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
+                                         className="bi bi-arrow-up-right lg:mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
                                          viewBox="0 0 16 16">
                                         <path
                                             d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"></path>
@@ -159,10 +163,10 @@ export default function Home() {
                         </li>
 
                         <li className="border-b border-indigo-200 group hover:bg-theme transition-all duration-300">
-                            <a href="" className="grid grid-cols-12 px-7 py-8">
+                            <a href="" className="grid grid-cols-12 lg:px-7 lg:py-8 p-5">
 
                                 <div
-                                    className="text-theme group-hover:text-white flex gap-6 items-center col-span-5 font-bold text-3xl">
+                                    className="lg:col-span-5 col-span-10 text-theme group-hover:text-white flex gap-6 items-center font-bold md:text-3xl text-2xl">
                                     <div className="text-xl">
                                         02
                                     </div>
@@ -170,7 +174,7 @@ export default function Home() {
                                     Web Design
                                 </div>
 
-                                <div className="col-span-5">
+                                <div className="lg:col-span-5 col-span-12 lg:order-2 order-3 lg:mt-0 mt-4">
                                     <p className="group-hover:text-white">I break down complex user experience problems
                                         to create integrity
                                         focussed
@@ -178,9 +182,9 @@ export default function Home() {
                                         that connect billions of people</p>
                                 </div>
 
-                                <div className="col-span-2 flex justify-end">
+                                <div className="col-span-2 flex justify-end lg:order-3 order-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         className="bi bi-arrow-up-right mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
+                                         className="bi bi-arrow-up-right lg:mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
                                          viewBox="0 0 16 16">
                                         <path
                                             d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"></path>
@@ -190,10 +194,10 @@ export default function Home() {
                         </li>
 
                         <li className="border-b border-indigo-200 group hover:bg-theme transition-all duration-300">
-                            <a href="" className="grid grid-cols-12 px-7 py-8">
+                            <a href="" className="grid grid-cols-12 lg:px-7 lg:py-8 p-5">
 
                                 <div
-                                    className="text-theme group-hover:text-white flex gap-6 items-center col-span-5 font-bold text-3xl">
+                                    className="lg:col-span-5 col-span-10 text-theme group-hover:text-white flex gap-6 items-center font-bold md:text-3xl text-2xl">
                                     <div className="text-xl">
                                         03
                                     </div>
@@ -201,7 +205,7 @@ export default function Home() {
                                     UI/UX Design
                                 </div>
 
-                                <div className="col-span-5">
+                                <div className="lg:col-span-5 col-span-12 lg:order-2 order-3 lg:mt-0 mt-4">
                                     <p className="group-hover:text-white">I break down complex user experience problems
                                         to create integrity
                                         focussed
@@ -209,9 +213,9 @@ export default function Home() {
                                         that connect billions of people</p>
                                 </div>
 
-                                <div className="col-span-2 flex justify-end">
+                                <div className="col-span-2 flex justify-end lg:order-3 order-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         className="bi bi-arrow-up-right mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
+                                         className="bi bi-arrow-up-right lg:mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
                                          viewBox="0 0 16 16">
                                         <path
                                             d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"></path>
@@ -221,18 +225,18 @@ export default function Home() {
                         </li>
 
                         <li className="border-b border-indigo-200 group hover:bg-theme transition-all duration-300">
-                            <a href="" className="grid grid-cols-12 px-7 py-8">
+                            <a href="" className="grid grid-cols-12 lg:px-7 lg:py-8 p-5">
 
                                 <div
-                                    className="text-theme group-hover:text-white flex gap-6 items-center col-span-5 font-bold text-3xl">
+                                    className="lg:col-span-5 col-span-10 text-theme group-hover:text-white flex gap-6 items-center font-bold md:text-3xl text-2xl">
                                     <div className="text-xl">
                                         04
                                     </div>
 
-                                    Graphics Design
+                                    App Design
                                 </div>
 
-                                <div className="col-span-5">
+                                <div className="lg:col-span-5 col-span-12 lg:order-2 order-3 lg:mt-0 mt-4">
                                     <p className="group-hover:text-white">I break down complex user experience problems
                                         to create integrity
                                         focussed
@@ -240,9 +244,9 @@ export default function Home() {
                                         that connect billions of people</p>
                                 </div>
 
-                                <div className="col-span-2 flex justify-end">
+                                <div className="col-span-2 flex justify-end lg:order-3 order-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         className="bi bi-arrow-up-right mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
+                                         className="bi bi-arrow-up-right lg:mt-4 fill-theme group-hover:fill-white rotate-90 group-hover:rotate-0 transition-all duration-300"
                                          viewBox="0 0 16 16">
                                         <path
                                             d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"></path>
@@ -256,8 +260,8 @@ export default function Home() {
             {/* Service section end */}
 
             {/*Projects tab section start*/}
-            <div className="container px-5 md:my-20 my-10">
-                <h1 className="text-theme text-[45px] font-bold">My Recent Works</h1>
+            <div className="container px-5 md:my-20 my-10" id="works">
+                <h1 className="text-theme lg:text-[45px] md:text-[40px] text-[35px] font-bold">My Recent Works</h1>
                 <p className="mt-4 mb-10">We put your ideas and thus your wishes in the form of a unique web project
                     that
                     inspires you and your customers.</p>
@@ -268,89 +272,98 @@ export default function Home() {
             {/* Projects tab section end */}
 
             {/*Experience / Education section start*/}
-            <div className="container-fluid bg-indigo-50 px-5 py-28">
+            <div className="container-fluid bg-indigo-50 px-5 lg:py-28 py-10" id="resume">
                 <div className="container">
-                    <div className="grid md:grid-cols-2 gap-10">
+                    <div className="grid md:grid-cols-2 lg:gap-10 gap-5">
                         <div className="left">
-                            <h1 className="text-theme text-[45px] font-bold mb-10">
+                            <h1 className="text-theme lg:text-[45px] md:text-[40px] text-[35px] font-bold mb-10">
                                 <i className="fa-solid fa-graduation-cap me-3"></i>My Experience</h1>
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2024
                                     - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">LEAD
                                     DEVELOPER</h2>
                                 <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
                             </div>
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
-                                    - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
-                                    DEVELOPER</h2>
-                                <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2021
+                                    - 2022</h3>
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">
+                                    FULL STACK DEVELOPER
+                                </h2>
+                                <p className="group-hover:text-white transition duration-300">Parsons, The New
+                                    School</p>
                             </div>
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
-                                    - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
-                                    DEVELOPER</h2>
-                                <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2020
+                                    - 2021</h3>
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">UI
+                                    DESIGNER</h2>
+                                <p className="group-hover:text-white transition duration-300">
+                                    House of Life, Leeds</p>
                             </div>
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2024
                                     - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
-                                    DEVELOPER</h2>
-                                <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">
+                                    JUNIOR GRAPHICS DESIGNER
+                                </h2>
+                                <p className="group-hover:text-white transition duration-300">Theme Junction, Bursa</p>
                             </div>
                         </div>
 
                         <div className="right">
-                            <h1 className="text-theme text-[45px] font-bold mb-10">
+                            <h1 className="text-theme lg:text-[45px] md:text-[40px] text-[35px] font-bold mb-10">
                                 <i className="fa-solid fa-graduation-cap me-3"></i>My Education</h1>
 
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
-                                    - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
-                                    DEVELOPER</h2>
-                                <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2020
+                                    - 2023</h3>
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">
+                                    PROGRAMMING COURSE
+                                </h2>
+                                <p className="group-hover:text-white transition duration-300">Harverd University</p>
                             </div>
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
-                                    - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
-                                    DEVELOPER</h2>
-                                <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2016
+                                    - 2020</h3>
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">GRAPHIC
+                                    DESIGN COURSE
+                                </h2>
+                                <p className="group-hover:text-white transition duration-300">University of Denmark</p>
                             </div>
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
-                                    - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
-                                    DEVELOPER</h2>
-                                <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2012
+                                    - 2015</h3>
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">WEB
+                                    DESIGN COURSE</h2>
+                                <p className="group-hover:text-white transition duration-300">University of
+                                    California</p>
                             </div>
 
                             <div
-                                className="bg-white px-10 py-7 group transition-all grid gap-2 lg:mr-[100px] rounded-3xl hover:bg-theme mb-7">
-                                <h3 className="text-theme font-extrabold text-xl group-hover:text-white transition duration-300">2024
-                                    - Present</h3>
-                                <h2 className="text-2xl font-extrabold group-hover:text-white transition duration-300">LEAD
-                                    DEVELOPER</h2>
-                                <p className="group-hover:text-white transition duration-300">Blockdots, London</p>
+                                className="bg-white lg:px-10 px-7 py-7 group transition-all grid gap-2 xl:mr-[100px] lg:mr-[50px] rounded-3xl hover:bg-theme lg:mb-7 mb-5">
+                                <h3 className="text-theme font-extrabold xl:text-xl text-lg group-hover:text-white transition duration-300">2011
+                                    - 2012</h3>
+                                <h2 className="xl:text-2xl text-xl font-extrabold group-hover:text-white transition duration-300">DESIGN
+                                    & TECHNOLOGY
+                                </h2>
+                                <p className="group-hover:text-white transition duration-300">Parsons, The New School
+                                </p>
                             </div>
 
                         </div>
@@ -361,13 +374,13 @@ export default function Home() {
 
 
             {/*Skills sections start*/}
-            <div className="container px-5 md:my-20 my-10">
-                <h1 className="text-theme text-[45px] font-bold">My Skills</h1>
+            <div className="container px-5 md:my-20 my-10" id="skills">
+                <h1 className="text-theme lg:text-[45px] md:text-[40px] text-[35px] font-bold">My Skills</h1>
                 <p className="mt-4 mb-10">We put your ideas and thus your wishes in the form of a unique web project
                     that
                     inspires you and your customers.</p>
 
-                <div className="grid md:grid-cols-6 grid-cols-3 gap-5">
+                <div className="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-5">
 
                     <div className="text-center">
                         <div
@@ -375,7 +388,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={htmlImage} alt="html"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">92%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">92%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">HTML</p>
                     </div>
@@ -386,7 +399,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={cssImage} alt="css"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">95%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">95%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">CSS</p>
                     </div>
@@ -397,7 +410,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={sassImage} alt="sass"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">90%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">90%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">Scss</p>
                     </div>
@@ -408,7 +421,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={vueImage} alt="vue"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">92%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">92%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">Vue</p>
                     </div>
@@ -419,7 +432,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={reactImage} alt="react"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">89%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">89%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">React</p>
                     </div>
@@ -431,7 +444,7 @@ export default function Home() {
                                 <Image width={60} height={60} className="object-cover" src={angularImage}
                                        alt="angular"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">91%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">91%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">Angular</p>
                     </div>
@@ -442,7 +455,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={jsImage} alt="js"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">93%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">93%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">JavaScript</p>
                     </div>
@@ -453,7 +466,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={phpImage} alt="css"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">90%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">90%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">Php</p>
                     </div>
@@ -465,7 +478,7 @@ export default function Home() {
                                 <Image width={60} height={60} className="object-cover" src={laravelImage}
                                        alt="laravel"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">91%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">91%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">Laravel</p>
                     </div>
@@ -476,7 +489,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={nodeImage} alt="node"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">85%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">85%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">Node js</p>
                     </div>
@@ -488,7 +501,7 @@ export default function Home() {
                                 <Image width={60} height={60} className="object-cover h-[60px]" src={mongodbImage}
                                        alt="mongodb"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">80%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">80%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">MongoDB</p>
                     </div>
@@ -499,7 +512,7 @@ export default function Home() {
                             <div className="grayscale group-hover:scale-[1.2] group-hover:grayscale-0 duration-500">
                                 <Image width={60} height={60} className="object-cover" src={sqlImage} alt="sql"/>
                             </div>
-                            <p className="text-gray-500 text-xl mt-7 font-extrabold group-hover:text-theme duration-300">90%</p>
+                            <p className="text-gray-500 text-xl sm:mt-7 mt-3 font-extrabold group-hover:text-theme duration-300">90%</p>
                         </div>
                         <p className="mt-5 text-theme mb-3">SQL</p>
                     </div>
@@ -509,24 +522,22 @@ export default function Home() {
             {/* Skills sections end */}
 
             {/*Contact section start*/}
-            <div className="container-fluid bg-indigo-50 px-5 py-28">
+            <div className="container-fluid bg-indigo-50 px-5 lg:py-28 py-10" id="contact">
                 <div className="container">
-                    <div className="grid lg:grid-cols-2 gap-5 place-items-center">
+                    <div className="grid lg:grid-cols-2 lg:gap-10">
                         {/*Contact form start*/}
-                        <div className="bg-white p-10 rounded-2xl">
-                            <h1 className="text-theme text-[45px] font-bold">Let’s work together!</h1>
+                        <div className="bg-white lg:p-10 sm:p-7 p-5 rounded-2xl lg:order-1 order-2">
+                            <h1 className="text-theme lg:text-[45px] md:text-[40px] text-[35px] font-bold">Let’s work
+                                together!</h1>
                             <p className="mb-10">I design and code beautifully simple things and i love what i do. Just
                                 simple like
                                 that!</p>
 
                             <form action="">
                                 <div className="mt-10 grid grid-cols-12 gap-5">
-                                    <div className="sm:col-span-6">
-                                        <label htmlFor="first-name"
-                                               className="text-sm font-medium leading-6 text-gray-600">First
-                                            name</label>
+                                    <div className="sm:col-span-6 col-span-12">
 
-                                        <div className="mt-2">
+                                        <div className="">
                                             <input type="text" name="first-name" id="first-name"
                                                    autoComplete="given-name"
                                                    placeholder="First Name"
@@ -535,22 +546,18 @@ export default function Home() {
 
                                     </div>
 
-                                    <div className="sm:col-span-6">
-                                        <label htmlFor="last-name"
-                                               className="text-sm font-medium leading-6 text-gray-600">Last name</label>
-                                        <div className="mt-2">
-                                            <input type="text" name="last-name" id="last-name"
+                                    <div className="sm:col-span-6 col-span-12">
+                                        <div className="">
+                                            <input type="text" name="last-name" id="last-name" placeholder="Last name"
                                                    autoComplete="family-name"
                                                    className="w-full rounded-lg border-0 ring-1 ring-gray-200 p-3 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 focus:ring-theme transition-all duration-300 focus:outline-0"/>
                                         </div>
                                     </div>
 
 
-                                    <div className="sm:col-span-6">
-                                        <label htmlFor="email"
-                                               className="text-sm font-medium leading-6 text-gray-600">Email</label>
+                                    <div className="sm:col-span-6 col-span-12">
 
-                                        <div className="mt-2">
+                                        <div className="">
                                             <input type="email" name="email" id="email"
                                                    autoComplete="new-email"
                                                    placeholder="Email address"
@@ -559,10 +566,8 @@ export default function Home() {
 
                                     </div>
 
-                                    <div className="sm:col-span-6">
-                                        <label htmlFor="phone"
-                                               className="text-sm font-medium leading-6 text-gray-600">Phone</label>
-                                        <div className="mt-2">
+                                    <div className="sm:col-span-6 col-span-12">
+                                        <div className="">
                                             <input type="text" name="phone" id="phone"
                                                    autoComplete="new-phone"
                                                    placeholder="phone number"
@@ -571,10 +576,7 @@ export default function Home() {
                                     </div>
 
                                     <div className="col-span-12">
-                                        <label htmlFor="service"
-                                               className="block text-sm font-medium leading-6 text-gray-900">Email
-                                            address</label>
-                                        <div className="mt-2">
+                                        <div className="">
                                             <select name="service" id="service"
                                                     className="w-full rounded-lg border-0 ring-1 ring-gray-200 p-3 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 focus:ring-theme transition-all duration-300 focus:outline-0">
                                                 <option value="">Choose a service</option>
@@ -588,9 +590,7 @@ export default function Home() {
 
 
                                     <div className="col-span-12">
-                                        <label htmlFor="message"
-                                               className="block text-sm font-medium leading-6 text-gray-900">Message</label>
-                                        <div className="mt-2">
+                                        <div className="">
                                             <textarea name="message" id="message" cols="10" rows="5"
                                                       placeholder="Start typing..."
                                                       className="w-full rounded-lg border-0 resize-none ring-1 ring-gray-200 p-3 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 focus:ring-theme transition-all duration-300 focus:outline-0"></textarea>
@@ -600,7 +600,7 @@ export default function Home() {
 
                                     <div className="col-span-12">
                                         <button type="button"
-                                                className="md:px-16 py-3 rounded-full bg-theme text-white transition-all hover:scale-105 active:scale-105 duration-300">
+                                                className="md:px-16 px-10 py-3 rounded-full bg-theme text-white transition-all hover:scale-105 active:scale-105 duration-300">
                                             Send Message
                                         </button>
                                     </div>
@@ -611,7 +611,8 @@ export default function Home() {
 
 
                         {/*Contact list start*/}
-                        <ul className="">
+
+                        <ul className="lg:order-2 order-1 lg:mt-10">
                             <li className="relative mb-10">
                                 <div
                                     className="grid place-items-center w-[50px] h-[50px] absolute left-0 rounded-full bg-theme text-white m-[10px]">
@@ -620,9 +621,9 @@ export default function Home() {
 
                                 <div className="ps-20 text-gray-500">
                                     Phone
-
+                                    <br/>
                                     <a href="tel:01717863320"
-                                       className="block font-semibold mt-1 text-xl text-theme group relative">01717863320
+                                       className="font-semibold mt-1 text-lg text-theme group relative">01717863320
                                         <span
                                             className="bg-theme h-[1px] absolute w-full left-0 bottom-[-5px] scale-0 transition-all duration-300 group-hover:scale-100 origin-bottom-right group-hover:origin-bottom-left"></span>
                                     </a>
@@ -638,9 +639,9 @@ export default function Home() {
 
                                 <div className="ps-20 text-gray-500">
                                     Email
-
+                                    <br/>
                                     <a href="mailto:ridwanul.hafiz@gmail.com"
-                                       className="block font-semibold mt-1 text-xl text-theme group relative">ridwanul.hafiz@gmail.com
+                                       className="font-semibold mt-1 text-lg text-theme group relative">ridwanul.hafiz@gmail.com
                                         <span
                                             className="bg-theme h-[1px] absolute w-full left-0 bottom-[-5px] scale-0 transition-all duration-300 group-hover:scale-100 origin-bottom-right group-hover:origin-bottom-left"></span>
                                     </a>
@@ -656,19 +657,21 @@ export default function Home() {
 
                                 <div className="ps-20 text-gray-500">
                                     Address
-
+                                    <br/>
                                     <a href=""
-                                       className="block font-semibold mt-1 text-xl text-theme group relative">6 th Floor
-                                        Flat – 6E, Shahi Tower House no: 25, <br/> Sector: 7, Plot: k/25 New Market,<br/> Jessore
+                                       className="font-semibold mt-1 text-lg text-theme group relative">6 th Floor
+                                        Flat – 6E, Shahi Tower House no: 25, <br/> Sector: 7, Plot: k/25 New
+                                        Market,<br/> Jessore
                                         Sadar Jessore - 7400
                                     </a>
                                 </div>
 
                             </li>
 
-
                         </ul>
                         {/* Contact list end */}
+
+
                     </div>
                 </div>
             </div>

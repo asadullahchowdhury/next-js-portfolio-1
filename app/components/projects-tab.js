@@ -30,7 +30,7 @@ function ProjectsTab() {
             </div>
 
 
-            <div className="mix-container grid xl:grid-cols-2 gap-5">
+            <div className="mix-container grid lg:grid-cols-2 gap-5">
 
                 <div data-filter=".category-a"
                      className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">

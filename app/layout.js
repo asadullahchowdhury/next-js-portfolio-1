@@ -1,6 +1,7 @@
 import {Inter, Roboto, Russo_One} from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/header";
+import Footer from "@/app/components/footer";
 
 const inter = Inter({subsets: ["latin"]});
 // const russo = Russo_One({subsets: ["latin"], weight: "400"})
@@ -16,6 +17,7 @@ export default function RootLayout({children}) {
         <body className={inter.className}>
         <Header/>
         {children}
+        <Footer/>
 
         <script src="https://kit.fontawesome.com/807ba58bd3.js" crossOrigin="anonymous"></script>
         </body>
