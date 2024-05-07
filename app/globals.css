@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     scroll-behavior: smooth;
 }
 
@@ -27,3 +27,22 @@ body{
     }
 }
 
+.fixed-header {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    animation: bounceIn .4s linear;
+    transition: all ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-200px);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

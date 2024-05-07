@@ -16,7 +16,7 @@ function Header() {
 
 
     return (
-        <div className={"header w-full p-5 z-10 " + (scroll ? 'fixed' : 'absolute')}>
+        <div className={"header w-full p-5 z-10 " + (scroll ? 'fixed-header' : 'absolute')}>
             <div className="container">
                 <div className="grid items-center justify-between grid-cols-2">
                     <div className="logo text-6xl text-stroke text-white font-extrabold">R</div>
