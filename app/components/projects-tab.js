@@ -2,38 +2,70 @@
 import React from 'react';
 import Image from "next/image";
 import mixitup from "mixitup"
+
 import work1 from "@/public/images/w1.png";
 import work2 from "@/public/images/w2.png";
 import work3 from "@/public/images/equidesk.png";
 import work4 from "@/public/images/bilify.png";
-import {useEffect} from "react";
+import {useEffect, useRef,useState} from "react";
 
 function ProjectsTab() {
-    const container = document.getElementsByClassName('mix-container')
+    const containerRef = useRef(null);
+    const mixerRef = useRef(null);
+    const [activeFilter, setActiveFilter] = useState('.all');
+
     useEffect(() => {
-        const mixer = mixitup('.mix-container');
-    })
+        if (containerRef.current) {
+            mixerRef.current = mixitup(containerRef.current, {
+                selectors: {
+                    target: '.item'
+                }
+            });
+        }
+
+        return () => {
+            if (mixerRef.current) {
+                mixerRef.current.destroy();
+            }
+        };
+    }, []);
+
+    const handleFilter = (filterValue) => {
+        if (mixerRef.current) {
+            mixerRef.current.filter(filterValue);
+            setActiveFilter(filterValue);
+        }
+    };
+
+    const handleSort = (sortValue) => {
+        if (mixerRef.current) {
+            mixerRef.current.sort(sortValue);
+        }
+    };
+
+
     return (
         <div>
             <div className="bg-indigo-100 rounded-full inline-flex mb-10">
-                <button type="button" className="rounded-full md:px-10 sm:px-5 px-4 py-3 bg-theme text-white"
-                        data-filter="all">All
+                <button type="button" className={"rounded-full md:px-10 sm:px-5 px-4 py-3 transition-all duration-300 " + (activeFilter === '.all' ? 'text-white bg-theme' : 'bg-transparent')}
+                        onClick={() => handleFilter('.all')}>All
                 </button>
-                <button type="button" className="rounded-full md:px-10 sm:px-5 px-4 py-3"
-                        data-filter=".category-a">UI/UX
+                <button type="button" className={"rounded-full md:px-10 sm:px-5 px-4 py-3 transition-all duration-300 " + (activeFilter === '.category-a' ? 'text-white bg-theme' : 'bg-transparent')}
+                        onClick={() => handleFilter('.category-a')}>UI/UX
                 </button>
-                <button type="button" className="rounded-full md:px-10 sm:px-5 px-4 py-3"
-                        data-filter=".category-b">Branding
+                <button type="button" className={"rounded-full md:px-10 sm:px-5 px-4 py-3 transition-all duration-300 " + (activeFilter === '.category-b' ? 'text-white bg-theme' : 'bg-transparent')}
+                        onClick={() => handleFilter('.category-b')}>Branding
                 </button>
-                <button type="button" className="rounded-full md:px-10 px-5 py-3" data-filter=".category-c">App
+                <button type="button" className={"rounded-full md:px-10 sm:px-5 px-4 py-3 transition-all duration-300 " + (activeFilter === '.category-c' ? 'text-white bg-theme' : 'bg-transparent')}
+                        onClick={() => handleFilter('.category-c')}>App
                 </button>
             </div>
 
 
-            <div className="mix-container grid lg:grid-cols-2 gap-5">
+            <div  ref={containerRef} className="mix-container grid lg:grid-cols-2 gap-5">
 
-                <div data-filter=".category-a"
-                     className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                <div
+                    className="category-a item all bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
                     <div className="w-full h-full ">
                         <Image className="w-full object-cover h-full" src={work1} placeholder="blur" alt="work1"/>
                     </div>
@@ -50,8 +82,8 @@ function ProjectsTab() {
 
                 </div>
 
-                <div data-filter=".category-b"
-                     className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                <div
+                    className="category-b item all bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
                     <div className="w-full h-full">
                         <Image className="w-full object-cover h-full" src={work2} placeholder="blur" alt="work2"/>
                     </div>
@@ -67,8 +99,8 @@ function ProjectsTab() {
                     </a>
                 </div>
 
-                <div data-filter=".category-c"
-                     className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                <div
+                    className="category-c item all bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
                     <div className="w-full h-full ">
                         <Image className="w-full object-cover h-full" src={work3} placeholder="blur" alt="work3"/>
                     </div>
@@ -84,8 +116,8 @@ function ProjectsTab() {
                     </a>
                 </div>
 
-                <div data-filter=".category-d"
-                     className="bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
+                <div
+                    className="category-b item all bg-[#140c1c] rounded-2xl shadow-lg px-5 pt-5 overflow-hidden h-[500px] relative group">
                     <div className="w-full h-full ">
                         <Image className="w-full object-cover h-full" src={work4} placeholder="blur" alt="work4"/>
                     </div>
