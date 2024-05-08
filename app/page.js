@@ -3,6 +3,7 @@ import ProfileImage from "@/app/components/profile-image";
 import ProjectsTab from "@/app/components/projects-tab";
 import Counter from "@/app/components/counter";
 import ContactForm from "@/app/components/contact-form";
+import ScrollTopBtn from "@/app/components/scroll-top-btn";
 import htmlImage from "@/public/images/html.png"
 import cssImage from "@/public/images/css.png"
 import sassImage from "@/public/images/sass.png"
@@ -587,6 +588,7 @@ export default function Home() {
             </div>
             {/* Contact section end */}
 
+            <ScrollTopBtn/>
 
         </main>
     );

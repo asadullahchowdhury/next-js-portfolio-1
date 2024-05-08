@@ -2,15 +2,17 @@
 import {useEffect, useState} from "react";
 
 
-
-
-
-
 function Header() {
     const [scroll, setScroll] = useState(false)
-    const countScroll= () =>{
-        setScroll(window.scrollY > 200)
+    const countScroll = () => {
+        setScroll(window.scrollY > 100)
     }
+
+    const [activity, setActivity] = useState(false)
+    const sidenav = () => {
+        setActivity(prevActivity => !prevActivity)
+    }
+
     useEffect(() => {
         document.addEventListener('scroll', function () {
             countScroll();
@@ -22,14 +24,14 @@ function Header() {
         <div className={"header w-full p-5 z-10 " + (scroll ? 'fixed-header' : 'absolute')}>
             <div className="container">
                 <div className="grid items-center justify-between grid-cols-12">
-                    <div className="logo text-6xl text-stroke text-white font-extrabold">R</div>
+                    <div className={"logo text-6xl text-stroke font-extrabold " + (activity ? 'z-20 stroke-white text-[transparent]' : 'text-white')}>R</div>
 
-                    <ul className="col-span-10 md:flex hidden gap-8 text-lg font-medium justify-end">
+                    <ul className={"col-span-10 flex md:flex-row gap-8 md:text-lg text-2xl font-medium md:justify-end justify-center text-center md:static fixed flex-col md:bg-[transparent] bg-theme/90 md:text-black text-white w-full top-0 bottom-0  md:py-0 py-10 z-10 transition-all duration-300 " + (activity ? 'left-0' : 'left-[-100%]')}>
                         <li>
                             <a href="#home"
                                className="hover:text-theme group transition-all duration-300 relative py-3 px-1">Home
                                 <span
-                                    className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300"></span>
+                                    className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300 overf"></span>
                             </a>
                         </li>
 
@@ -77,22 +79,19 @@ function Header() {
                     </ul>
 
                     <div className="col-span-10 md:hidden grid justify-items-end">
-                        <button className="grid py-2 items-center group gap-1 w-[40px] rounded-xl h-[50px]">
+                        <button className="grid py-2 items-center group gap-1 w-[40px] rounded-xl h-[50px] z-20"
+                                onClick={sidenav}>
                             <span
-                                className="rounded-xl origin-right transition-all duration-300 w-full h-[2px] bg-theme"></span>
+                                className={"rounded-xl origin-right transition-all duration-300 w-full h-[2px] " + (activity ? 'bg-white -rotate-45 relative -top-[1px]' : 'bg-theme')}></span>
                             <span
-                                className="rounded-xl group-hover:scale-x-50 origin-right transition-all duration-300 w-full h-[2px] bg-theme"></span>
+                                className={"rounded-xl group-hover:scale-x-50 origin-right transition-all duration-300 w-full h-[2px] bg-theme " + (activity ? 'opacity-0' : '')}></span>
                             <span
-                                className="rounded-xl origin-right transition-all duration-300 w-full h-[2px] bg-theme"></span>
+                                className={"rounded-xl origin-right transition-all duration-300 w-full h-[2px] " + (activity ? 'bg-white rotate-45 relative top-[1px]' : 'bg-theme')}></span>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <button
-                className={"w-[50px] h-[50px] rounded-full grid text-theme place-items-center fixed border border-theme right-[40px] bottom-[40px] " + (scroll ? '') }>
-                <i className="fa-solid fa-arrow-up-long"></i>
-            </button>
         </div>
     );
 }
