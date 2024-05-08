@@ -14,9 +14,11 @@ function Header() {
     }
 
     useEffect(() => {
-        document.addEventListener('scroll', function () {
-            countScroll();
-        })
+        if (typeof window !== undefined){
+            window.addEventListener('scroll', function () {
+                countScroll();
+            })
+        }
     })
 
 
@@ -28,7 +30,7 @@ function Header() {
 
                     <ul className={"col-span-10 flex md:flex-row gap-8 md:text-lg text-2xl font-medium md:justify-end justify-center text-center md:static fixed flex-col md:bg-[transparent] bg-theme/90 md:text-black text-white w-full top-0 bottom-0  md:py-0 py-10 z-10 transition-all duration-300 " + (activity ? 'left-0' : 'left-[-100%]')}>
                         <li>
-                            <a href="#home"
+                            <a href="/#home"
                                className="hover:text-theme group transition-all duration-300 relative py-3 px-1">Home
                                 <span
                                     className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300 overf"></span>
@@ -36,7 +38,7 @@ function Header() {
                         </li>
 
                         <li>
-                            <a href="#services"
+                            <a href="/#services"
                                className="hover:text-theme group transition-all duration-300 relative py-3 px-1">Services
                                 <span
                                     className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300"></span>
@@ -45,7 +47,7 @@ function Header() {
 
 
                         <li>
-                            <a href="#works"
+                            <a href="/#works"
                                className="hover:text-theme group transition-all duration-300 relative py-3 px-1">Works
                                 <span
                                     className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300"></span>
@@ -53,7 +55,7 @@ function Header() {
                         </li>
 
                         <li>
-                            <a href="#resume"
+                            <a href="/#resume"
                                className="hover:text-theme group transition-all duration-300 relative py-3 px-1">Resume
                                 <span
                                     className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300"></span>
@@ -61,7 +63,7 @@ function Header() {
                         </li>
 
                         <li>
-                            <a href="#skills"
+                            <a href="/#skills"
                                className="hover:text-theme group transition-all duration-300 relative py-3 px-1">Skills
                                 <span
                                     className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300"></span>
@@ -69,7 +71,7 @@ function Header() {
                         </li>
 
                         <li>
-                            <a href="#contact"
+                            <a href="/#contact"
                                className="hover:text-theme group transition-all duration-300 relative py-3 px-1">Contact
                                 <span
                                     className="h-[2px] w-full bg-theme absolute bottom-[5px] rounded-xl start-0 scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-all duration-300"></span>

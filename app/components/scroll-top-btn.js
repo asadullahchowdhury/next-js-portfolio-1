@@ -17,7 +17,7 @@ function ScrollTopBtn() {
     }
 
     useEffect(() => {
-        document.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function () {
             countScroll();
         })
     })

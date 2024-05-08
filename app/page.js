@@ -20,7 +20,6 @@ import {Russo_One} from "next/font/google";
 
 const russo = Russo_One({subsets: ["latin"], weight: "400"})
 export default function Home() {
-    // const mixer = mixitup('.mix-container');
     return (
         <main>
 
