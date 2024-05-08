@@ -1,18 +1,18 @@
-// 'use client'
+'use client'
 import React from 'react';
 import Image from "next/image";
-// import mixitup from "mixitup"
+import mixitup from "mixitup"
 import work1 from "@/public/images/w1.png";
 import work2 from "@/public/images/w2.png";
 import work3 from "@/public/images/w3.png";
 import work4 from "@/public/images/w4.png";
-// import {useEffect} from "react";
+import {useEffect} from "react";
 
 function ProjectsTab() {
-    // const container = document.getElementsByClassName('mix-container')
-    // useEffect(() => {
-    //     const mixer = mixitup('.mix-container');
-    // })
+    const container = document.getElementsByClassName('mix-container')
+    useEffect(() => {
+        const mixer = mixitup('.mix-container');
+    })
     return (
         <div>
             <div className="bg-indigo-100 rounded-full inline-flex mb-10">
