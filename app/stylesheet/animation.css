@@ -1,0 +1,88 @@
+
+.circle {
+    --anim-delay: 0s;
+
+    @apply w-12 h-12 rounded-full;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #4f46e5;
+    animation: undulating-circle 1s infinite;
+    animation-delay: var(--anim-delay);
+
+    @media screen and (max-width: 767px) {
+        width: 40px;
+        height: 40px;
+    }
+    @media screen and (max-width: 576px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.circle:nth-child(1) {
+    --anim-delay: 0.1s;
+}
+
+.circle:nth-child(2) {
+    --anim-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+    --anim-delay: 0.3s;
+}
+
+.circle:nth-child(4) {
+    --anim-delay: 0.4s;
+}
+
+.circle:nth-child(5) {
+    --anim-delay: 0.5s;
+}
+
+.circle:nth-child(6) {
+    --anim-delay: 0.6s;
+}
+
+.circle:nth-child(7) {
+    --anim-delay: 0.7s;
+}
+
+.circle:nth-child(8) {
+    --anim-delay: 0.8s;
+}
+
+@keyframes undulating-circle {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        background: #4f46e5;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(0, calc(60px * 2 + 10px)) scale(0.4);
+        background: #7c73ff;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        background: #4f46e5;
+    }
+}
+
+
+
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

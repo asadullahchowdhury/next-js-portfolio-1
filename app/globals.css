@@ -1,4 +1,5 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+@import "stylesheet/animation.css";
 
 @tailwind base;
 @tailwind components;
@@ -51,37 +52,8 @@
     position: fixed;
     background-color: #fff;
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
-    /*animation: bounceIn .5s linear;*/
     transition: .4s all ease;
 }
 
-
-@keyframes bounceIn {
-    0% {
-        transform: translateY(-200px);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    70% {
-        transform: translateY(-30px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes pulsate {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 
 
