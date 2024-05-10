@@ -4,8 +4,8 @@ import Image from "next/image";
 // import mixitup from "mixitup"
 import work1 from "@/public/images/w1.png";
 import work2 from "@/public/images/w2.png";
-import work3 from "@/public/images/w3.png";
-import work4 from "@/public/images/w4.png";
+import work3 from "@/public/images/equidesk.png";
+import work4 from "@/public/images/bilify.png";
 // import {useEffect} from "react";
 
 function ProjectsTab() {
@@ -58,10 +58,10 @@ function ProjectsTab() {
                     <div
                         className="absolute w-full h-full top-0 left-0 right-0 bg-black/50 transition-all duration-300 scale-0 group-hover:scale-100"></div>
 
-                    <a href="https://barberly.thethemeai.com"
+                    <a href="https://wahaj.thenewjeddah.com"
                        className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
                        target={"_blank"}>
-                        <h1 className="text-3xl font-bold mb-2">Barberly</h1>
+                        <h1 className="text-3xl font-bold mb-2">Wahaj</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi.</p>
                     </a>
                 </div>
@@ -75,10 +75,10 @@ function ProjectsTab() {
                     <div
                         className="absolute w-full h-full top-0 left-0 right-0 bg-black/50 transition-all duration-300 scale-0 group-hover:scale-100"></div>
 
-                    <a href="https://barberly.thethemeai.com"
+                    <a href="hthttps://staging.equidesk.com"
                        className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
                        target={"_blank"}>
-                        <h1 className="text-3xl font-bold mb-2">Barberly</h1>
+                        <h1 className="text-3xl font-bold mb-2">Equidesk</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi.</p>
                     </a>
                 </div>
@@ -92,10 +92,10 @@ function ProjectsTab() {
                     <div
                         className="absolute w-full h-full top-0 left-0 right-0 bg-black/50 transition-all duration-300 scale-0 group-hover:scale-100"></div>
 
-                    <a href="https://barberly.thethemeai.com"
+                    <a href="https://bilify.thethemeai.com"
                        className="text-white absolute bottom-[-100px] group-hover:bottom-[20px] w-full left-0 px-7 pt-5 transition-all duration-500"
                        target={"_blank"}>
-                        <h1 className="text-3xl font-bold mb-2">Barberly</h1>
+                        <h1 className="text-3xl font-bold mb-2">Bilify</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi.</p>
                     </a>
                 </div>
